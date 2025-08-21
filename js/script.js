@@ -1,7 +1,9 @@
-const person = {
+let person = {
     name: "Alex",
     age: 25
 }
+
+person = { ...person, city: "Oslo" }
 
 const { age, ...allOtherProperties } = person 
 
