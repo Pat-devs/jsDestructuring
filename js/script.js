@@ -1,11 +1,10 @@
 const toyBox = ["teddy", "dinosaur", "robot"];
 
+// this could create an error due to variable name being used already:
+//const firstToy = "car"
 
-const [a, b, c] = toyBox;
+//const [firstToy, secondToy, thirdToy] = toyBox;
 
-console.log(
-    "First toy: " + a, 
-    "Second toy: " + b, 
-    "Third toy: " + c 
-);
+
+//console.log(firstToy)
 
