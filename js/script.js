@@ -1,32 +1,19 @@
-let myToyBox = ["teddy", "dinosaur", "robot"];
+const toyBox = ["teddy", "dinosaur", "robot"];
 
-const newToys = ["car", "cat", "house"]
+const container = document.getElementById("main-container")
 
-// merge two arrays, using "spread operator"
-myToyBox = [...myToyBox, ...newToys]
+// function creates a button and returns it
+function createButton(text) {
+    const buttonElement = document.createElement("button")
+    buttonElement.textContent = text
 
-
-//console.log(myToyBox)
-
-// function takes two numbers, and prints the sum
-function calculateV1(a, b) {
-    console.log(a + b)
+    return buttonElement
 }
 
-// function takes an unspecifeid amount of numbers, and prints the sum
-// should be allowed to be called with any number of arguments
-// example usage:
-// calculateV2(2,2,2) // prints 6
-// calcalateV2(1,1) // prints 2
+const toyElements = toyBox.map(toy => {
+    return createButton(toy)
+})
 
-// example here the spread operator allows our function to receive an unspecified number of arguments
-function calculateV2(...numbers) {
-
-    for (const number of numbers) {
-        console.log(number)
-    }
-}
-
-// 
-
-calculateV2(1,2)
+// the document.append method can take dom elements as arguemnts, but not an array
+// here we use (...) spread operator to "unpack" all elements
+container.append(...toyElements)
