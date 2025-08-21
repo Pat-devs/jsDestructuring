@@ -1,7 +1,9 @@
-const names = []
+const person = {
+  name: "Alice",
+  age: 25,
+  city: "Oslo"
+};
 
-let [ a, b, c = "Guest" ] = names;
+const { name, age, city, country = "Norway" } = person
 
-a = "Patryk"
-
-console.log(a, b, c)
+console.log(country)
