@@ -1,11 +1,11 @@
 const toyBox = ["teddy", "dinosaur", "robot"];
 
 
-
+const [a, b, c] = toyBox;
 
 console.log(
-    "First toy: " + toyBox[0], 
-    "Second toy: " + toyBox[1], 
-    "Third toy: " + toyBox[2] 
+    "First toy: " + a, 
+    "Second toy: " + b, 
+    "Third toy: " + c 
 );
 
