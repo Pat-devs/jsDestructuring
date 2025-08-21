@@ -10,6 +10,7 @@ function createButton(text) {
     return buttonElement
 }
 
+// use map method to "transform" array elemtns into html-elements 
 const toyElements = toyBox.map(toy => {
     return createButton(toy)
 })
