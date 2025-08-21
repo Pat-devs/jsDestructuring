@@ -1,12 +1,7 @@
-let person = {
-    name: "Alex",
-    age: 25
-}
+const names = []
 
-person = { ...person, city: "Oslo" }
+let [ a, b, c = "Guest" ] = names;
 
-const { age, ...allOtherProperties } = person 
+a = "Patryk"
 
-console.log(age)
-
-console.log(allOtherProperties)
+console.log(a, b, c)
