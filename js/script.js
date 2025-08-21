@@ -10,11 +10,5 @@ function createButton(text) {
     return buttonElement
 }
 
-// use map method to "transform" array elemtns into html-elements 
-const toyElements = toyBox.map(toy => {
-    return createButton(toy)
-})
-
-// the document.append method can take dom elements as arguemnts, but not an array
-// here we use (...) spread operator to "unpack" all elements
-container.append(...toyElements)
+// we can use the map method, and use the spread operator on it directly inside the .append argument
+container.append(...toyBox.map(toy => createButton(toy)))
